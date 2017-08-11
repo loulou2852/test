@@ -93,11 +93,12 @@
     <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
     <script type="text/javascript" src="js/my-app.js"></script>
   <script>
-    document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-    window.open = cordova.InAppBrowser.open;
-  var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
-ref.addEventListener('loadstart', function(event) { alert(event.url); });
+    document.addEventListener("deviceready", onDeviceReady, false); 
+function onDeviceReady()
+{
+        // Now safe to use the Codova API
+        window.open = cordova.InAppBrowser.open;
+        var ref = cordova.InAppBrowser.open('http://www.google.com', '_blank', 'location=yes');
 }
   <script>
 </body>
