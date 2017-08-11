@@ -27,10 +27,10 @@
         http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
      -->
 
-    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <!--<link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">-->
 </head>
 
 <body>
@@ -96,6 +96,7 @@
     document.addEventListener("deviceready", onDeviceReady, false); 
 function onDeviceReady()
 {
+  console.log('heyyyy');
         // Now safe to use the Codova API
         window.open = cordova.InAppBrowser.open;
         var ref = cordova.InAppBrowser.open('http://www.google.com', '_blank', 'location=yes');
