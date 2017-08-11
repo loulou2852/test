@@ -121,7 +121,9 @@ function onDeviceReady()
     // device APIs are available
     //
     function onDeviceReady() {
-         var ref = window.open('https://www.google.fr/search?q=youtube', '_blank', 'location=yes');
+         //var ref = window.open('https://www.google.fr/search?q=youtube', '_blank', 'location=yes');
+      var ref = cordova.InAppBrowser.open('https://www.google.fr/search?q=youtube', '_blank', 'location=yes');
+        ref.addEventListener('loadstart', function(event) { alert(event.url); });
          // close InAppBrowser after 5 seconds
          //setTimeout(function() {
             // ref.close();
